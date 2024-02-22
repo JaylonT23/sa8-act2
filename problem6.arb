@@ -1,0 +1,20 @@
+ module Drivable
+  def drive
+    puts "Driving the #{self.class}..."
+  end
+end
+
+class Car
+  include Drivable
+end
+
+class Truck
+  include Drivable
+end
+
+# Objects of both classes can use the drive method
+car = Car.new
+car.drive
+
+truck = Truck.new
+truck.drive

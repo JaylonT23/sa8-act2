@@ -1,0 +1,11 @@
+ class User
+  attr_reader :username
+
+  def username=(value)
+    if value.nil? || value.empty?
+      raise ArgumentError, "Username cannot be empty."
+    end
+
+    @username = value
+  end
+end
